@@ -228,7 +228,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Form - Takes 3 columns */}
@@ -237,7 +237,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="h-full"
+                className=" "
               >
                 <Card className="border-slate-200 shadow-xl h-full flex flex-col">
                   <CardHeader className="space-y-2">
@@ -265,7 +265,7 @@ const Contact = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="John Doe"
-                            className={`${
+                            className={`h-11 text-sm sm:text-base ${
                               errors.name
                                 ? "border-red-500"
                                 : "border-slate-300"
@@ -295,7 +295,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="john@company.com"
-                            className={`${
+                            className={`h-11 text-sm sm:text-base ${
                               errors.email
                                 ? "border-red-500"
                                 : "border-slate-300"
@@ -326,7 +326,7 @@ const Contact = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="+1 (555) 000-0000"
-                            className="border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                            className="border-slate-300 focus:border-blue-500 focus:ring-blue-500 h-11 text-sm sm:text-base "
                             disabled={isSubmitting}
                           />
                           {errors.phone && (
@@ -350,7 +350,7 @@ const Contact = () => {
                             value={formData.company}
                             onChange={handleChange}
                             placeholder="Your Company Inc."
-                            className="border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                            className="h-11 text-sm sm:text-base border-slate-300 focus:border-blue-500 focus:ring-blue-500"
                             disabled={isSubmitting}
                           />
                         </div>
@@ -369,7 +369,7 @@ const Contact = () => {
                           value={formData.subject}
                           onChange={handleChange}
                           placeholder="How can we help you?"
-                          className={`${
+                          className={`h-11 text-sm sm:text-base ${
                             errors.subject
                               ? "border-red-500"
                               : "border-slate-300"
@@ -394,14 +394,15 @@ const Contact = () => {
                         <Textarea
                           id="message"
                           name="message"
+                          rows={12}
                           value={formData.message}
                           onChange={handleChange}
                           placeholder="Tell us about your project or questions..."
-                          className={`${
+                          className={`resize-none text-sm sm:text-base ${
                             errors.message
                               ? "border-red-500"
                               : "border-slate-300"
-                          } focus:border-blue-500 focus:ring-blue-500 resize-none flex-1 min-h-[150px]`}
+                          } focus:border-blue-500 focus:ring-blue-500 flex-1  `}
                           disabled={isSubmitting}
                         />
                         {errors.message && (

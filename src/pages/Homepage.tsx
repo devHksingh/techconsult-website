@@ -1,21 +1,22 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Shield, Cloud, Network, Lightbulb, CheckCircle2, Users, Award, TrendingUp, Star, Calendar, User, BookOpen, ChevronRight } from 'lucide-react';
 import { Spotlight } from '@/components/ui/spotlight-new';
-import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
+// import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 // Professional color scheme
-const colors = {
-  primary: '#0F172A',
-  secondary: '#3B82F6',
-  accent: '#06B6D4',
-};
+// const colors = {
+//   primary: '#0F172A',
+//   secondary: '#3B82F6',
+//   accent: '#06B6D4',
+// };
 
-const HeroHighlight = ({ children, className = "" }) => {
+const HeroHighlight = ({ children, className = "" }: React.PropsWithChildren<{ className?: string }>) => {
   const [mouseX, setMouseX] = React.useState(0);
   const [mouseY, setMouseY] = React.useState(0);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: { currentTarget: { getBoundingClientRect: () => any; }; clientX: number; clientY: number; }) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setMouseX(e.clientX - rect.left);
     setMouseY(e.clientY - rect.top);
@@ -47,7 +48,7 @@ const HeroHighlight = ({ children, className = "" }) => {
   );
 };
 
-const Highlight = ({ children }) => {
+const Highlight: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <motion.span
       initial={{ backgroundSize: "0% 100%" }}

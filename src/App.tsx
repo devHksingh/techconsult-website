@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import { Button } from '@/components/ui/moving-border';
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
@@ -9,7 +7,7 @@ import { HeroHighlight,Highlight } from './components/ui/hero-highlight'
 // import { HeroHighlight, Highlight } from "../ui/hero-highlight";
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>

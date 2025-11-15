@@ -1,6 +1,6 @@
-import React from 'react';
-import { Shield, Target, Users, Award, TrendingUp, Clock, CheckCircle2, Linkedin, Mail, ArrowRight, BarChart3, LineChart, Users2, Zap, Code, Cloud, Lock } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+import { Shield, Target, Users, Award, TrendingUp, CheckCircle2, Linkedin, ArrowRight, BarChart3, Users2, Zap, Code, Cloud, Lock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "motion/react";
 
 const About = () => {

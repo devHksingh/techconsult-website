@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Shield, Cloud, Network, Lightbulb, Check, Code, Palette, TrendingUp, Settings, Zap, Lock, Database, Smartphone, ArrowRight, CheckCircle2, Server, Globe, Cpu, Rocket } from "lucide-react";
+import { Shield, Cloud, Network, Lightbulb, Code, Palette, TrendingUp, Settings, Database, Smartphone, ArrowRight, CheckCircle2,  Cpu, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { motion } from "motion/react";
