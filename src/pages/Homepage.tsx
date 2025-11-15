@@ -156,7 +156,7 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative pt-16 w-full overflow-hidden">
+      <section className="relative  w-full overflow-hidden">
         <HeroHighlight className="pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10">
           <Spotlight />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 text-center max-w-7xl w-full">

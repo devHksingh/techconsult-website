@@ -34,13 +34,13 @@ const Header = () => {
   });
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 ">
+    <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top bar with contact info - hidden on scroll */}
       <motion.div
         initial={{ opacity: 1, y: 0 }}
         animate={{
           opacity: visible ? 0 : 1,
-          y: visible ? -40 : 0,
+          y: visible ? -50 : 0,
           height: visible ? 0 : 'auto',
         }}
         transition={{ duration: 0.3 }}
@@ -49,20 +49,20 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-end items-center h-10 text-xs sm:text-sm">
-            <div className="flex items-center gap-6 text-slate-300">
+            <div className="flex items-center gap-4 sm:gap-6 text-slate-300">
               <a
-                href="mailto:info@company.com"
+                href="mailto:info@techconsult.com"
                 className="flex items-center gap-2 hover:text-cyan-400 transition-colors"
               >
                 <Mail size={14} />
-                <span className="hidden sm:inline">info@company.com</span>
+                <span className="hidden sm:inline">info@techconsult.com</span>
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+15551234567"
                 className="flex items-center gap-2 hover:text-cyan-400 transition-colors"
               >
                 <Phone size={14} />
-                <span className="hidden sm:inline">+1 (234) 567-890</span>
+                <span className="hidden sm:inline">+1 (555) 123-4567</span>
               </a>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Header = () => {
             : '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
         }}
         transition={{ duration: 0.3 }}
-        className="relative"
+        className="relative bg-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -91,16 +91,16 @@ const Header = () => {
                 IT
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight" style={{ color: colors.primary }}>
+                <span className="font-bold text-base sm:text-lg leading-tight" style={{ color: colors.primary }}>
                   TechConsult
                 </span>
-                <span className="text-xs" style={{ color: colors.textLight }}>
+                <span className="text-xs hidden sm:block" style={{ color: colors.textLight }}>
                   IT Solutions & Consulting
                 </span>
               </div>
             </a>
 
-            {/* Desktop Navigation - Restored rounded animated background */}
+            {/* Desktop Navigation */}
             <div 
               className="hidden lg:flex items-center gap-1"
               onMouseLeave={() => setHoveredIndex(null)}
@@ -113,7 +113,6 @@ const Header = () => {
                   className="relative px-5 py-2.5 text-sm font-medium transition-colors"
                   style={{ color: hoveredIndex === idx ? colors.secondary : colors.text }}
                 >
-                  {/* Rounded animated background - like your original */}
                   {hoveredIndex === idx && (
                     <motion.div
                       layoutId="navbar-hover"
@@ -151,6 +150,7 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
               style={{ color: colors.primary }}
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -165,9 +165,9 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-slate-200 overflow-hidden"
+              className="lg:hidden border-t border-slate-200 overflow-hidden bg-white"
             >
-              <div className="px-4 py-6 space-y-3 bg-white">
+              <div className="px-4 py-6 space-y-3">
                 {navItems.map((item, idx) => (
                   <motion.a
                     key={idx}
@@ -182,7 +182,7 @@ const Header = () => {
                     {item.name}
                   </motion.a>
                 ))}
-                <div className="pt-4 space-y-3">
+                <div className="pt-4">
                   <a
                     href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
